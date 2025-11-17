@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sleek Music Recommender</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.6.2/dist/dotlottie-wc.js" type="module"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="background-lottie">
+        <dotlottie-wc src="https://lottie.host/df74050d-efd7-4eb9-b492-8368749709e0/qh5oyrsdzE.lottie" speed="1" autoplay loop></dotlottie-wc>
+    </div>
+
+    <header>
+        <div class="logo">
+            <i class="fas fa-headphones"></i>
+            <span>Music Recommender</span>
+        </div>
+        <button id="theme-toggle">
+            <i class="fas fa-moon"></i>
+        </button>
+    </header>
+
+    <div class="main-container">
+        <nav class="breadcrumb">
+            <a href="#" class="nav-link active">Home</a>
+            <a href="#" class="nav-link">About</a>
+            <a href="#" class="nav-link">Contact</a>
+        </nav>
+        
+        <div class="hero">
+            <h1>Find Your Next Favorite Song</h1>
+            <p>Discover new music with our smart recommendation system. Just enter a song you love, and we'll do the rest.</p>
+        </div>
+
+        <div class="search-box">
+            <input type="text" id="search-input" placeholder="Search for a song...">
+            <button id="search-btn"><i class="fas fa-search"></i> Search</button>
+        </div>
+
+        <div class="examples">
+            <span class="tag" onclick="setSearch('Piano Concerto')">Piano Concerto</span>
+            <span class="tag" onclick="setSearch('Danny Boy')">Danny Boy</span>
+            <span class="tag" onclick="setSearch('Clancy')">Clancy</span>
+            <span class="tag" onclick="setSearch('Gati Bali')">Gati Bali</span>
+        </div>
+
+        <div class="content-sections">
+            <div id="results"></div>
+            <div id="recommendations"></div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Music Recommender. All rights reserved.</p>
+    </footer>
+
+    <audio id="audio-player" preload="auto" hidden></audio>
+    <script src="script.js"></script>
+</body>
+</html>
